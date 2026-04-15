@@ -1,5 +1,6 @@
 # s2p-plots-from-terminal
 
+## What it does
 This script plots S-parameters from an s2p file.
 
 CLI Flags:
@@ -13,7 +14,12 @@ Flag        Default      Purpose
 --no-save   off          Show interactively instead of saving
 ```
 
-Tyipical invocations:
+
+## Requirements
+
+
+
+## Examples (Tyipical invocations):
 ```
 # Two files, default S21
 python plot_s2p.py pump_line.s2p cryostat.s2p
@@ -25,4 +31,5 @@ python plot_s2p.py pump_line.s2p cryostat.s2p --param s12 --out-dir ./plots
 python plot_s2p.py a.s2p b.s2p c.s2p --no-save
 ```
 
+## Notes
 The +1e-300 guard from your snippet is kept in extract_db() to avoid -inf from log(0). Each file's legend entry is just its filename, keeping labels clean regardless of how many files are loaded.
